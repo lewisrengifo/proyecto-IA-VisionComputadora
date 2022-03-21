@@ -26,12 +26,6 @@ print(f'img2 shape: {img2.shape}')
 #edge detection(?
 #show
 ##train tests
-'''Trains a simple convnet on the MNIST dataset.
-Gets to 99.25% test accuracy after 12 epochs
-(there is still a lot of margin for parameter tuning).
-16 seconds per epoch on a GRID K520 GPU.
-'''
-
 
 
 batch_size = 128
@@ -86,7 +80,7 @@ model.compile(loss=keras.losses.categorical_crossentropy,
               metrics=['accuracy'])
 
 model.summary()
-'''
+
 model.fit(x_train, y_train,
 batch_size=batch_size,
           epochs=epochs,
@@ -98,4 +92,4 @@ print('Test accuracy:', score[1])
 
 #Guardar el Modelo
 model.save('final_model_w12.h5')
-'''
+

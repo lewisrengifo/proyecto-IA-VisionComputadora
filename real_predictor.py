@@ -17,13 +17,13 @@ import pandas as pd
 
 
 
-
+#invocacion del modelo
 Model_Name= "my_model"
 model_save_path = "final_model_w12.h5"
 model = load_model(model_save_path)
 
 
-img_np = cv2.imread("dog2.jpg")  # cv2.IMREAD_COLOR in OpenCV 3.1
+img_np = cv2.imread("auto1.jpg")  # cv2.IMREAD_COLOR in OpenCV 3.1
 #resize for print
 scale_percent = 130 # percent of original size
 width = int(img_np.shape[1] * scale_percent / 100)
